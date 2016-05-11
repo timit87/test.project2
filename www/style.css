@@ -115,9 +115,10 @@
 		display: block;
 		float: left;
 		height: 50px;
-		padding: 0 68px 0 47px;
+		padding: 0 60px 0 47px;
 		color: #FFFFFF;
 		font-size: 16px;
+		font-weight: Bold;
 		line-height: 50px;
 		font-family: open sans;
 		background-image: url('images/b-mail-l-l.png');
@@ -143,9 +144,47 @@
 	font-size: 16px;
 	line-height: 50px;
 	font-family: open sans;
+	font-weight: Bold;
 	text-decoration: none;
 	padding: 0 60px 0 23px;
 }
-.header {
+.b-table-1_top {
+	width: 1320px;
+	height: 420px;
+	margin-top:145px;
+	
+}
+.b-table-1_top a{
+	color: #FFFFFF;
+	font-size: 16px;
+	line-height: 110px;
+	font-family: open sans;
+	
+}
+.b-table-1_top_1 {
+	background-color: #ED3E45;
+	padding: 53px 428px 45px 30px;
+}
+#header {
+	margin-top:145px;
+}
+.header-l {
+	color: #FFFFFF;
+	font-size: 16px;
+	font-family: open sans;
+	font-weight: Bold;
+	background-color:#ED3E45;
+	height:110px;
+	padding: 50px 0 0 30px;
+	margin: 0;
+}
+.header-r {
+	color: #FFFFFF;
+	font-size: 16px;
+	font-family: open sans;
+	font-weight: Bold;
+	background-color:#5A6771;
+	height:110px;
+	padding: 50px 0 0 30px;
 	margin: 0;
 }

@@ -1,1 +1,25 @@
-html{font-family:Open Sans; }
+@font-face 	{
+ 	font-family:'open_sans';
+ 	src: url(../fonts/OpenSans-Regular.ttf);
+	}
+
+@font-face	{
+	font-family:'open_sans_bold';
+ 	src: url(../fonts/OpenSans-Bold.ttf);
+	}
+
+@font-face	{
+	font-family:'open_sans_light';
+ 	src: url(../fonts/OpenSans-Light.ttf);
+	}
+
+
+@font-face	{
+	font-family:'raleway-bold';
+ 	src: url(../fonts/Raleway-Bold.ttf);
+	}
+
+@font-face	{
+	font-family:'raleway-medium';
+ 	src: url(../fonts/Raleway-Medium.ttf);
+	}

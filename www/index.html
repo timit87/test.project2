@@ -3,27 +3,28 @@
     <head>
 		<meta charset="utf-8">
 		<title>Тестовый проект-2</title>
-		<meta name="keywords"content=""/>
-		<meta name="description"content=""/>
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
 				
 		<link rel="stylesheet" href="css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel="stylesheet" type="text/css" href="css/fonts.css">
+		
+		<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
 	</head>
 	<body>
 		<div class="l-page">
 			<div class="l-header">
-				
 				<div class="b-header">
-					<a href="#" class="b-header__logo"></a>
+					<a href="#"  id="click-0" class="b-header__logo"></a>
 					<div class="b-header__menu">
-						<a class="b-header__menu-item" href="#">About Us</a>
-						<a class="b-header__menu-item" href="#">Industries</a>
-						<a class="b-header__menu-item" href="#">Expertise</a>
-						<a class="b-header__menu-item" href="#">Ideas&#160;&&#160;Portfolio</a>
-						<a class="b-header__menu-item" href="#">Carreers</a>
+						<a class="b-header__menu-item" href="#" id="click-1">About Us</a>
+						<a class="b-header__menu-item" href="#" id="click-2">Industries</a>
+						<a class="b-header__menu-item" href="#" id="click-3">Expertise</a>
+						<a class="b-header__menu-item" href="#" id="click-4">Ideas&#160;&&#160;Portfolio</a>
+						<a class="b-header__menu-item" href="#" id="click-5">Careers</a>
 					</div> <!--b-header__menu -->
-					<a class="b-header__button" href="#">Contact Us</a>
+					<a class="b-header__button" href="#" id="click-6">Contact Us</a>
 					
 					<div class="b-header__lang">   
 						<div class="b-header__lang-text">En</div>
@@ -39,17 +40,28 @@
 			<div class="l-content">
 				
 				<div class="b-content__top">
-					<div class="b-content__top-title">World-class Engineering Services</div>
-					<div class="b-content__top-subtitle">We extend Silicon Valley engineering spirit to create<br />the best software products for our clients worldwide</div>
+					<div class="b-content__top-title">
+						<p id="pager-title_1">World-class Engineering Services</p>
+						<p id="pager-title_2">Home</p>
+						<p id="pager-title_3">Ship</p>
+						<p id="pager-title_4">Island</p>
+					</div>
+					<div class="b-content__top-subtitle">
+						<p id="pager-subtitle_1" class="pager-subtitle_1">We extend Silicon Valley engineering spirit to create<br />the best software products for our clients worldwide</p>
+						<p id="pager-subtitle_2" class="pager-subtitle_2"><br />Home-subtitle</p>
+						<p id="pager-subtitle_3" class="pager-subtitle_3"><br />Ship-subtitle</p>
+						<p id="pager-subtitle_4" class="pager-subtitle_4"><br />Island-subtitle</p>
+						
+					</div>
 					<div class="b-content__top-buttons-wrap">
 						<a class="b-content__top-button" href="#">About Innovecs</a>
 						<a class="b-content__top-button m-content__top-button_1" href="#"><span class="b-content__top-button-bg"></span>Download presentation</a>
 					</div>
 					<div class="b-content__top-pager">
-						<a class="b-content__top-pager-item m-content__top-pager-item_active"></a>
-						<a class="b-content__top-pager-item m-content__top-pager-item_inactive" href="#"></a>
-						<a class="b-content__top-pager-item m-content__top-pager-item_inactive" href="#"></a>
-						<a class="b-content__top-pager-item m-content__top-pager-item_inactive" href="#"></a>
+						<a id="pager_1" class="b-content__top-pager-item active" href="#"></a>
+						<a id="pager_2" class="b-content__top-pager-item" href="#"></a>
+						<a id="pager_3" class="b-content__top-pager-item" href="#"></a>
+						<a id="pager_4" class="b-content__top-pager-item" href="#"></a>
 					</div>
 				</div> <!-- b-content__top -->
 				
@@ -107,13 +119,13 @@
 						</div>	
 						<div class="b-content__ideas-item m-content__ideas-item_right">
 							<ul class="b-content__ideas-item-list">
-									<li class="b-content__ideas-item-list-el m-content__ideas-item-list-el_right-top_1"></li>
-									<li class="b-content__ideas-item-list-el m-content__ideas-item-list-el_right-top_2"></li>
+								<li class="b-content__ideas-item-list-el m-content__ideas-item-list-el_right-top_1"></li>
+								<li class="b-content__ideas-item-list-el m-content__ideas-item-list-el_right-top_2"></li>
 								<li class="b-content__ideas-item-list-el m-content__ideas-item-list-el_right-middle"></li>
 								<li class="b-content__ideas-item-list-el m-content__ideas-item-list-el_right-down"></li>
-						</ul>
+							</ul>
 						</div>
-					</div>	
+					</div>
 				</div> 	<!-- b-content__ideas-wrap -->
 				
 				<div class="b-content__work">
@@ -156,10 +168,12 @@
 					<div class="b-content__news-title">Our News<span class="m-content__news-title_color"> & </span>Events</div>
 					<div class="b-content__news-list">
 						<div class="col-md-12 col-md-offset-1 col-xs-12 b-content__news-list-item">
+							<a href="#" class="b-content__news-list-item-button m-content__news-list-item-button_left"><img src="images/button-content-news-item-button-left.png"></a>
+							<a href="#" class="b-content__news-list-item-button m-content__news-list-item-button_right"><img src="images/button-content-news-item-button-right.png"></a>
 							<a href="#" class="col-md-3 col-xs-3 b-content__news-list-item-left"><span class="m-content__news-list-item_red">March 21</span><br /><br /><br />Innovecs is the most attentive employer2015! Innovecs won HR Brand Award – Ukraine 2015 as the most careful employer with its project W@W</a>
 							<a href="#" class="col-md-3 col-xs-3 b-content__news-list-item-left-middle"><span class="m-content__news-list-item_red">March 7</span><br /><br /><br /><span class="m-content__news-list-item_color">Innovecs became the first IT-company to accept bitcoin payments in the Eastern Europe</span> </a>
 							<a href="#" class="col-md-3 col-xs-3 b-content__news-list-item-right-middle"><span class="m-content__news-list-item_red">February 17</span><br /><br /><br />Innovecs starts cooperation with Kyiv Smart City initiative A Memorandum on implementation ofthe Kyiv Smart City development strategy</a>
-							<div class="col-md-3 col-xs-3 b-content__news-list-item-right"><span class="m-content__news-list-item_gray">February 17</span><br /><a href="#" class="m-content__news-list-item_button"><img src="images/button-content-news-item-right.png"></a><br /><br />Innovecs starts cooperation with Kyiv Smart City initiative A Memorandum on implementation ofthe Kyiv Smart City development strategy</div>
+							<div class="col-md-3 col-xs-3 b-content__news-list-item-right"><span class="m-content__news-list-item_gray">February 17</span><br /><br /><br />Innovecs starts cooperation with Kyiv Smart City initiative A Memorandum on implementation ofthe Kyiv Smart City development strategy</div>
 							<div class="b-content__news-item-right-hide"></div>
 						</div>
 					</div>
@@ -173,21 +187,23 @@
 					<div class="b-bottom__top-title">Contact us</div>
 					<div class="b-bottom__top-subtitle">We are always open for a new great project and cooperation!</div>
 				</div>
-					
-				<div class ="b-bottom__content-wrap row">
-					<div class ="b-bottom__content col-md-6 col-xs-6">
-						<div class ="b-bottom__content-item m-bottom__content-item-left">
-							<ul class ="b-bottom__content-item-list">
-								<li class ="b-bottom__content-item-list-el"><input type="text" placeholder="name" ></li>
-								<li class ="b-bottom__content-item-list-el"><input type="text" placeholder="phone (optional)"></li>
-								<li class ="b-bottom__content-item-list-el"><input type="text" placeholder="e-mail"></li>
-								<li class ="b-bottom__content-item-list-el m-bottom__content-item-list-el_left-bottom"><input type="text" placeholder="your request is about..." ></li>
+						
+				<div class="b-bottom__content-wrap row">
+					<div class="b-bottom__content col-md-6 col-xs-6">
+						<div class="b-bottom__content-item m-bottom__content-item-left">
+							<ul class="b-bottom__content-item-list">
+								<li class="b-bottom__content-item-list-el"><input type="text" placeholder="name" ></li>
+								<li class="b-bottom__content-item-list-el"><input type="text" placeholder="phone (optional)"></li>
+								<li class="b-bottom__content-item-list-el"><input type="text" placeholder="e-mail"></li>
+								<li class="b-bottom__content-item-list-el m-bottom__content-item-list-el_left-bottom"><input type="text" placeholder="your request is about..." ></li>
 							</ul>
 							<a href="#" class="b-bottom__content-button-left">Submit</a>
 						</div>
-						<div class ="b-bottom__content-item m-bottom__content-item-right">
-							<ul class ="b-bottom__content-item-list">
-								<li class ="b-bottom__content-item-list-el"><textarea rows="4" placeholder="message"></textarea></li>
+						<div class="b-bottom__content-item m-bottom__content-item-right">
+							<div class="b-bottom__content-item-right-line"></div>
+							<div class="b-bottom__content-item-right-line-bottom"></div>
+							<ul class="b-bottom__content-item-list">
+								<li class="b-bottom__content-item-list-el"><textarea rows="4" placeholder="message"></textarea></li>
 							</ul>
 							<a href="#"class="b-bottom__content-button-right">Cancel</a>
 						</div>
@@ -204,12 +220,171 @@
 				<a href="#" class="col-md-1 col-xs-1 b-footer__link m-footer__link_yt"></a>
 				<a href="#" class="col-md-1 col-xs-1 b-footer__link m-footer__link_ss"></a>
 			</div> <!-- l-footer -->
+		</div><!-- l-page-->
+		
+		<script type="text/javascript">
+			$(window).scroll(function () {
+				$('.l-header').css("left", -$(this).scrollLeft() + "px");
+			});
 			
-		</div>	 <!-- l-page-->
+			window.addEventListener('scroll', function(e){
+				var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+					shrinkOn = 500,
+					header = $(".b-header");
+				if (distanceY > shrinkOn) {
+					$('.b-header').css("height", "46px");
+					$('.b-header__logo').css("height", "23px");
+					$('.b-header__lang-text').css("line-height", "46px");
+				} else {
+					if (distanceY < shrinkOn){
+						$('.b-header').css("height", "80px");
+						$('.b-header__logo').css("height", "46px");
+						$('.b-header__lang-text').css("line-height", "80px");
+					}
+				}
+			});
+			
+			$(document).ready(function(){				//pager_1
+				$("#pager_1").click(function() {
+					$("a.b-content__top-pager-item").removeClass('active');
+					$("#pager_1").addClass('active');
+					$('.b-content__top').fadeOut(0);
+					$(".b-content__top").fadeIn(100,function(){
+						$('.b-content__top').css("background", "url('images/bg-content-top.png') no-repeat");
+						$('.b-content__top').css("background-size", "cover");
+					});
+					$('.b-content__top-title p').fadeOut(0);
+					$("#pager-title_1").fadeIn(1000);
+					$('.b-content__top-subtitle p').fadeOut(0);
+					$("#pager-subtitle_1").fadeIn(1000);
+				});
+			});
+			$(document).ready(function(){				//pager_2
+				$("#pager_2").click(function() {
+					$('a.b-content__top-pager-item').removeClass('active');
+					$("#pager_2").addClass('active');
+					$('.b-content__top').fadeOut(0);
+					$(".b-content__top").fadeIn(100,function(){
+						$('.b-content__top').css("background", "url('images/bg-content-top-2.png') no-repeat");
+						$('.b-content__top').css("background-size", "cover");
+					});
+					$('.b-content__top-title p').fadeOut(0);
+					$("#pager-title_2").fadeIn(1000);
+					$('.b-content__top-subtitle p').fadeOut(0);
+					$("#pager-subtitle_2").fadeIn(1000);
+				});
+			});
+			$(document).ready(function(){				//pager_3
+				$("#pager_3").click(function() {
+					$("a.b-content__top-pager-item").removeClass('active');
+					$("#pager_3").addClass('active');
+					$('.b-content__top').fadeOut(0);
+					$(".b-content__top").fadeIn(100,function(){
+						$('.b-content__top').css("background", "url('images/bg-content-top-3.png') no-repeat");
+						$('.b-content__top').css("background-size", "cover");
+					});
+					$('.b-content__top-title p').fadeOut(0);
+					$("#pager-title_3").fadeIn(1000);
+					$('.b-content__top-subtitle p').fadeOut(0);
+					$("#pager-subtitle_3").fadeIn(1000);
+				});
+			});
+			$(document).ready(function(){				//pager_4
+				$("#pager_4").click(function() {
+					$("a.b-content__top-pager-item").removeClass('active');
+					$("#pager_4").addClass('active');
+					$('.b-content__top').fadeOut(0);
+					$(".b-content__top").fadeIn(100,function(){
+						$('.b-content__top').css("background", "url('images/bg-content-top-4.png') no-repeat");
+						$('.b-content__top').css("background-size", "cover");
+					});
+					$('.b-content__top-title p').fadeOut(0);
+					$("#pager-title_4").fadeIn(1000);
+					$('.b-content__top-subtitle p').fadeOut(0);
+					$("#pager-subtitle_4").fadeIn(1000);
+				});
+			});
+			
+			$(document).ready(function(){
+				$("#click-0").click(function(event){			//click logo
+					$('html, body').scrollTop(0);
+					event.preventDefault();
+					var target_top=$('a[name="'+this.href.split("#")[1]+'"]').offset().top;
+					$('html, body').animate({scrollTop:target_top}, 'slow');
+				});
+			   $("#click-1").click(function(event){			//click about us
+					$('html, body').scrollTop(150);
+					event.preventDefault();
+					var target_top=$('a[name="'+this.href.split("#")[1]+'"]').offset().top;
+					$('html, body').animate({scrollTop:target_top}, 'slow');
+				});
+				$("#click-2").click(function(event){		//click industries и expertise 
+					$('html, body').scrollTop(600);
+					event.preventDefault();
+					var target_top=$('a[name="'+this.href.split("#")[1]+'"]').offset().top;
+					$('html, body').animate({scrollTop:target_top}, 'slow');
+				});
+				$("#click-3").click(function(event){		//click industries и expertise 
+					$('html, body').scrollTop(600);
+					event.preventDefault();
+					var target_top=$('a[name="'+this.href.split("#")[1]+'"]').offset().top;
+					$('html, body').animate({scrollTop:target_top}, 'slow');
+				});
+				$("#click-4").click(function(event){		//click ideas & portfolio 
+					$('html, body').scrollTop(1250);
+					event.preventDefault();
+					var target_top=$('a[name="'+this.href.split("#")[1]+'"]').offset().top;
+					$('html, body').animate({scrollTop:target_top}, 'slow');
+				});
+				$("#click-5").click(function(event){		//click careers
+					$('html, body').scrollTop(2000);
+					event.preventDefault();
+					var target_top=$('a[name="'+this.href.split("#")[1]+'"]').offset().top;
+					$('html, body').animate({scrollTop:target_top}, 'slow');
+				});
+				$("#click-6").click(function(event){		//click contact us
+					$('html, body').scrollTop(3620);
+					event.preventDefault();
+					var target_top=$('a[name="'+this.href.split("#")[1]+'"]').offset().top;
+					$('html, body').animate({scrollTop:target_top}, 'slow');
+				});
+			});           
+			
+			/*$(document).ready(function(){
+				
+			});
+			
+			$('.b-content__table-item-button').click(function(){
+				  $('html, body').scrollTop(2250);
+			   });
+			});
+			$(document).ready(function(){
+				$('.b-content__table-item-button').click(function(event){
+					event.preventDefault();
+					var target_top=$('a[name="'+this.href.split("#")[1]+'"]').offset().top;
+					$('html, body').animate({scrollTop:target_top}, 'slow');
+				});
+			});*/
+			   //$('.b-content__top-button').click(function(){
+				//  alert($('.l-page').scrollTop());
+			   //});
+			
+			$(document).ready(function(){
+				$('.m-content__news-list-item-button_left').hide(0);
+					$('.m-content__news-list-item-button_right').click(function() {
+						$('.m-content__news-list-item-button_right').hide(0);
+						$('.m-content__news-list-item-button_left').show(0);
+					});
+					$('.m-content__news-list-item-button_left').click(function() {
+						$('.m-content__news-list-item-button_left').hide(0);
+						$('.m-content__news-list-item-button_right').show(0);
+					});							
+			});
+
+		</script>
+		
 	</body>
 </html>
-
-
 
 
 

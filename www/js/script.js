@@ -1,140 +1,50 @@
-$(window).scroll(function () {
-				$('.l-header').css("left", -$(this).scrollLeft() + "px");
-			});
+$(window).on('scroll',function () { //скролл l-header по горизонтали
+	$('.l-header').css("left", -$(this).scrollLeft() + "px");
+});
 			
-			window.addEventListener('scroll', function(e){
-				var distanceY = window.pageYOffset || document.documentElement.scrollTop,
-					shrinkOn = 500,
-					header = $(".b-header");
-				if (distanceY > shrinkOn) {
-					$('.b-header').css("height", "46px");
-					$('.b-header__logo').css("height", "23px");
-					$('.b-header__lang-text').css("line-height", "46px");
-				} else {
-					if (distanceY < shrinkOn){
-						$('.b-header').css("height", "80px");
-						$('.b-header__logo').css("height", "46px");
-						$('.b-header__lang-text').css("line-height", "80px");
-					}
-				}
-			});
+$(window).on('scroll', function() { //уменьшение b-header при вертикальном скролле
+	if (window.scrollY > 500) {
+		$('.b-header').addClass('m-header_small');
+	} else {
+		$('.b-header').removeClass('m-header_small');
+	}
+});
+
+$('.b-header__menu-item, .b-header__logo, .b-header__button').on('click', function() {
+	var targetTop;
+	if ($(this).hasClass('m-header__logo_click')) {
+		targetTop = 0;
+	} else if ($(this).hasClass('m-header__menu-item_1')) {
+		targetTop = 150;
+	} else if ($(this).hasClass('m-header__menu-item_2')) {
+		targetTop = 600;
+	} else if ($(this).hasClass('m-header__menu-item_3')) {
+		targetTop = 600;
+	} else if ($(this).hasClass('m-header__menu-item_4')) {
+		targetTop = 1250;
+	} else if ($(this).hasClass('m-header__menu-item_5')) {
+		targetTop = 2000;
+	} else if ($(this).hasClass('m-header__button_click')) {
+		targetTop = 3620;
+	}
+	$('html, body').animate({
+		scrollTop: targetTop
+	}, 'slow');
+
+	return false;
+});
 			
-			$(document).ready(function(){
-				$("#click-0").click(function(event){			//click logo
-					$('html, body').scrollTop(0);
-					event.preventDefault();
-					var target_top=$('a[name="'+this.href.split("#")[1]+'"]').offset().top;
-					$('html, body').animate({scrollTop:target_top}, 'slow');
-				});
-			   $("#click-1").click(function(event){			//click about us
-					$('html, body').scrollTop(150);
-					event.preventDefault();
-					var target_top=$('a[name="'+this.href.split("#")[1]+'"]').offset().top;
-					$('html, body').animate({scrollTop:target_top}, 'slow');
-				});
-				$("#click-2").click(function(event){		//click industries и expertise 
-					$('html, body').scrollTop(600);
-					event.preventDefault();
-					var target_top=$('a[name="'+this.href.split("#")[1]+'"]').offset().top;
-					$('html, body').animate({scrollTop:target_top}, 'slow');
-				});
-				$("#click-3").click(function(event){		//click industries и expertise 
-					$('html, body').scrollTop(600);
-					event.preventDefault();
-					var target_top=$('a[name="'+this.href.split("#")[1]+'"]').offset().top;
-					$('html, body').animate({scrollTop:target_top}, 'slow');
-				});
-				$("#click-4").click(function(event){		//click ideas & portfolio 
-					$('html, body').scrollTop(1250);
-					event.preventDefault();
-					var target_top=$('a[name="'+this.href.split("#")[1]+'"]').offset().top;
-					$('html, body').animate({scrollTop:target_top}, 'slow');
-				});
-				$("#click-5").click(function(event){		//click careers
-					$('html, body').scrollTop(2000);
-					event.preventDefault();
-					var target_top=$('a[name="'+this.href.split("#")[1]+'"]').offset().top;
-					$('html, body').animate({scrollTop:target_top}, 'slow');
-				});
-				$("#click-6").click(function(event){		//click contact us
-					$('html, body').scrollTop(3620);
-					event.preventDefault();
-					var target_top=$('a[name="'+this.href.split("#")[1]+'"]').offset().top;
-					$('html, body').animate({scrollTop:target_top}, 'slow');
-				});
-			});      
+			//переключение табов
+$('.b-content__top-pager-item').on('click', function() {   // кликаем по любой из кнопочек
+	if(!$(this).hasClass('m-content__top-pager-item_active')) {  //если она не активена
+		$('.b-content__top-pager-item').removeClass('m-content__top-pager-item_active');	//убираем модификатор из автивной кнопки
+		$(this).addClass('m-content__top-pager-item_active');	//делаем активной кнопочку которую мы кликнули
+		$('.b-content__top-item').css('opacity', 0);	//скрываем в прозрачность отображаемые элементы
+		$('.b-content__top-item').eq($(this).index()).css('opacity', 1);	//выбираем нужный элемент и выводим его из прозрачности. Я так понял что выбирается по порядковому номеру, если нажимаем допустим 3-ю кнопку, то третий элемент и выводит.
+		}
+		return false;	
+});
+
+	
 			
-			$(document).ready(function(){				//pager_1
-				$("#pager_1").click(function() {
-					$("a.b-content__top-pager-item").removeClass('active');
-					$("#pager_1").addClass('active');
-					$('.b-content__top').fadeOut(0);
-					$(".b-content__top").fadeIn(100,function(){
-						$('.b-content__top').css("background", "url('images/bg-content-top.png') no-repeat");
-						$('.b-content__top').css("background-size", "cover");
-					});
-					$('.b-content__top-title p').fadeOut(0);
-					$("#pager-title_1").fadeIn(1000);
-					$('.b-content__top-subtitle p').fadeOut(0);
-					$("#pager-subtitle_1").fadeIn(1000);
-				});
-			});
-			$(document).ready(function(){				//pager_2
-				$("#pager_2").click(function() {
-					$('a.b-content__top-pager-item').removeClass('active');
-					$("#pager_2").addClass('active');
-					$('.b-content__top').fadeOut(0);
-					$(".b-content__top").fadeIn(100,function(){
-						$('.b-content__top').css("background", "url('images/bg-content-top-2.png') no-repeat");
-						$('.b-content__top').css("background-size", "cover");
-					});
-					$('.b-content__top-title p').fadeOut(0);
-					$("#pager-title_2").fadeIn(1000);
-					$('.b-content__top-subtitle p').fadeOut(0);
-					$("#pager-subtitle_2").fadeIn(1000);
-				});
-			});
-			$(document).ready(function(){				//pager_3
-				$("#pager_3").click(function() {
-					$("a.b-content__top-pager-item").removeClass('active');
-					$("#pager_3").addClass('active');
-					$('.b-content__top').fadeOut(0);
-					$(".b-content__top").fadeIn(100,function(){
-						$('.b-content__top').css("background", "url('images/bg-content-top-3.png') no-repeat");
-						$('.b-content__top').css("background-size", "cover");
-					});
-					$('.b-content__top-title p').fadeOut(0);
-					$("#pager-title_3").fadeIn(1000);
-					$('.b-content__top-subtitle p').fadeOut(0);
-					$("#pager-subtitle_3").fadeIn(1000);
-				});
-			});
-			$(document).ready(function(){				//pager_4
-				$("#pager_4").click(function() {
-					$("a.b-content__top-pager-item").removeClass('active');
-					$("#pager_4").addClass('active');
-					$('.b-content__top').fadeOut(0);
-					$(".b-content__top").fadeIn(100,function(){
-						$('.b-content__top').css("background", "url('images/bg-content-top-4.png') no-repeat");
-						$('.b-content__top').css("background-size", "cover");
-					});
-					$('.b-content__top-title p').fadeOut(0);
-					$("#pager-title_4").fadeIn(1000);
-					$('.b-content__top-subtitle p').fadeOut(0);
-					$("#pager-subtitle_4").fadeIn(1000);
-				});
-			});
-			
-			$(document).ready(function(){
-				$('.m-content__news-list-item-button_left').hide(0);
-					$('.m-content__news-list-item-button_right').click(function() {
-						$('.m-content__news-list-item-button_right').hide(500);
-						$('.m-content__news-list-item-button_left').show(500);
-						$('.b-content__news-list-item-left').hide(500);
-					});
-					$('.m-content__news-list-item-button_left').click(function() {
-						$('.m-content__news-list-item-button_left').hide(500);
-						$('.m-content__news-list-item-button_right').show(500);
-						$('.b-content__news-list-item-left').show(500);
-					});							
-			});
+				
